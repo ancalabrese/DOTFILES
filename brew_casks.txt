@@ -1,0 +1,4 @@
+chrome-devtools
+google-chrome
+notion
+visual-studio-code

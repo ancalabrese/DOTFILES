@@ -1,0 +1,1 @@
+/Users/ancalabrese/.bazel/bin/bazel.fish
