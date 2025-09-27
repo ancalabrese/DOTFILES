@@ -395,6 +395,17 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      vim.api.nvim_create_autocmd('VimEnter', {
+        group = vim.api.nvim_create_augroup('UserTelescope', { clear = true }),
+        pattern = '*',
+        callback = function()
+          if vim.fn.argc() == 0 and vim.api.nvim_buf_get_name(0) == '' then
+            require('telescope').extensions.file_browser.file_browser()
+          end
+        end,
+        desc = 'Open file browser on startup',
+      })
     end,
   },
 
