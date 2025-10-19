@@ -1,0 +1,8 @@
+# ~/.config/ghostty/config
+
+# Set the theme to Catppuccin Mocha
+theme = "catppuccin frappe"
+
+# You may also want a modern font with ligatures and icons
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14

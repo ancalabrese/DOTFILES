@@ -9,3 +9,6 @@ function forwardAdb
     ssh -R 5037:127.0.0.1:5037 avengers.c.googlers.com
 end
 
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+starship init fish | source
