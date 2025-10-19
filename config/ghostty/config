@@ -1,3 +1,5 @@
 font-family = JetBrainsMono Nerd Font
 theme = Catppuccin Frappe
 font-size = 14
+title = "👻"
+shell-integration-features = "no-title"
