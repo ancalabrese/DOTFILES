@@ -1,0 +1,11 @@
+# config to launch ghostty and connect it to cloudtop
+font-family = "JetBrainsMono Nerd Font"
+theme = "Catppuccin Frappe"
+font-size = 14
+
+window-title = "👻 Avengers"
+
+shell-integration-features = "no-title"
+shell = "/bin/fish"
+
+shell-args = ["-c", "ssh anto@avengers.c.googlers.com"]

@@ -1,8 +1,3 @@
-if status --is-interactive
-    gcertstatus --check_remaining=60m >/dev/null 2>&1
-    or gcert -s
-end
-
 set -gx GOPATH /Users/ancalabrese/go
 
 function forwardAdb
@@ -12,3 +7,9 @@ end
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 starship init fish | source
+
+if status --is-interactive
+    gcertstatus --check_remaining=60m >/dev/null 2>&1
+    or gcert -s
+end
+
