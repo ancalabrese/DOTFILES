@@ -13,3 +13,6 @@ if status --is-interactive
     or gcert -s
 end
 
+
+# Added by Jetski
+fish_add_path /Users/ancalabrese/.jetski/jetski/bin
