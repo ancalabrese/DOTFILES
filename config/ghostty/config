@@ -1,5 +1,25 @@
-font-family = JetBrainsMono Nerd Font
-theme = Catppuccin Frappe
-font-size = 14
-title = "👻"
-shell-integration-features = "no-title"
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-style = Regular
+font-size = 12
+
+# Window
+window-theme = ghostty
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface=false
+resize-overlay = never
+gtk-toolbar-style = flat
+
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = false
+
+# Cursor styling + SSH session terminfo
+# (all shell integration options must be passed together)
+shell-integration-features = no-cursor,ssh-env
+
+# Slowdown mouse scrolling
+mouse-scroll-multiplier = 0.95
+
+clipboard-paste-protection = false

@@ -1,0 +1,43 @@
+# --- 1. PROMPT ---
+eval "$(starship init bash)"
+
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+# Navigation shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Development tools
+alias g='git'
+alias d='docker'
+
+# Git helpers
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'
+
+# --- 3. THE "OMARCHY" FUNCTIONS ---
+# Open Neovim at current dir if no args provided
+n() {
+  if [ $# -eq 0 ]; then
+    /opt/homebrew/bin/nvim .
+  else
+    /opt/homebrew/bin/nvim "$@"
+  fi
+}
+
+# Quick experiment directory (DHH classic)
+try() {
+  local dir=~/Work/tries/$(date +%Y-%m-%d-%H%M)
+  mkdir -p "$dir"
+  cd "$dir" || return
+}
+
+# --- 4. INTEGRATIONS ---
+eval "$(zoxide init bash)"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
